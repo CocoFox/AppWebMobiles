@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- <html ng-app="route" ng-controller="toDoController">
+-->
+<html ng-app="myApp">
+
+<head>
+    <title>Tasks App</title>
+    <meta http-equiv="Content Type" content="text/html; charset=utf-8" />
+    
+</head>
+<script src =""></script>
+<body ng-controller="myCtrl">
+    
+    <form ng-submit="addTask()">
+
+    Add a Task: <input type="text" ng-model="taskname"><input type="submit" value="Add">
+    </form>
+    <br><br>
+    
+
+    <div ng-repeat="ta in taskList">
+        <input type="checkbox" ng-model="ta.done"><span ng-click="toggleDone(ta)" ng-style ="ta.done && {'text-decoration': 'line-through'}">{{ta.taskname}}</span><button ng-click="removeTask(ta)">X</button>
+    </div>
+    
+    <script src="../www/src/assets/angular.min.js"></script>
+    <script src="../www/js/taskApp.js"></script>
+</body>
+</html>
+</html>
